@@ -15,7 +15,7 @@ apt-get install -y software-properties-common
 apt-add-repository -y ppa:chris-lea/node.js
 #add-apt-repository -y ppa:ubuntu-toolchain-r/test
 apt-get update
-apt-get install -y --force-yes git postgresql python-dev cmake build-essential uuid-dev gnutls-bin memcached redis-server chrpath git-core libssl-dev libfontconfig1-dev nodejs checkinstall curl libcurl4-gnutls-dev libgnutls-dev libxml2-dev libxslt1-dev g++-4.8
+apt-get install -y --force-yes wget git postgresql python-dev cmake build-essential uuid-dev gnutls-bin memcached redis-server chrpath git-core libssl-dev libfontconfig1-dev nodejs checkinstall curl libcurl4-gnutls-dev libgnutls-dev libxml2-dev libxslt1-dev g++-4.8
 #update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
 
 # Python prerequisites
