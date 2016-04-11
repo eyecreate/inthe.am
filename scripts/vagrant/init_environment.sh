@@ -11,12 +11,12 @@ fi
 # Install necessary packages
 echo "installing depencencies"
 apt-get update
-apt-get install -y python-software-properties
+apt-get install -y software-properties-common
 apt-add-repository -y ppa:chris-lea/node.js
-add-apt-repository -y ppa:ubuntu-toolchain-r/test
+#add-apt-repository -y ppa:ubuntu-toolchain-r/test
 apt-get update
-apt-get install -y --force-yes git postgresql-server-dev-9.1 python-dev cmake build-essential uuid-dev gnutls-bin memcached redis-server chrpath git-core libssl-dev libfontconfig1-dev nodejs firefox checkinstall curl libcurl4-gnutls-dev libgnutls-dev libxml2-dev libxslt1-dev g++-4.8
-update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+apt-get install -y --force-yes git postgresql python-dev cmake build-essential uuid-dev gnutls-bin memcached redis-server chrpath git-core libssl-dev libfontconfig1-dev nodejs checkinstall curl libcurl4-gnutls-dev libgnutls-dev libxml2-dev libxslt1-dev g++-4.8
+#update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
 
 # Python prerequisites
 wget -nv https://bootstrap.pypa.io/get-pip.py
@@ -177,7 +177,7 @@ if [ -z "$TRAVIS" ]; then
     service taskd-celery restart
     service taskd restart
 
-    chown -R vagrant:vagrant $MAIN_DIR
+    #chown -R vagrant:vagrant $MAIN_DIR
 else
     if [ -d /home/travis/.config ]; then
         chmod -R 777 /home/travis/.config
